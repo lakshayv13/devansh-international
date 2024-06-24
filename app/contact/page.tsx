@@ -23,16 +23,16 @@ export default function ContactPage() {
     <div className="-mt-20">
       <h1 className={clsx(title(), "hidden lg:block")}>Our Offices</h1>
       <div className="hidden lg:flex justify-around gap-x-0 xl:gap-x-5 -mt-14">
-        {siteConfig.addresses.map((item) => {
+        {siteConfig.addresses.map((item, idx) => {
           return (
-            <PinCard location={item.location} state={item.state} name={item.name} number={item.number} mail={item.mail} address={item.address} />
+            <PinCard key={idx} location={item.location} state={item.state} name={item.name} number={item.number} mail={item.mail} address={item.address} />
           )
         })}
       </div>
       <div className="flex flex-wrap justify-center lg:hidden sm:flex-nowrap gap-5 mb-[5rem]">
-        {siteConfig.addresses.map((item) => {
+        {siteConfig.addresses.map((item, idx) => {
           return (
-            <MeteorCard state={item.state} name={item.name} number={item.number} mail={item.mail} location={item.address} />
+            <MeteorCard key={idx} state={item.state} name={item.name} number={item.number} mail={item.mail} location={item.address} />
           )
         })}
       </div>
@@ -41,7 +41,7 @@ export default function ContactPage() {
         <h1 className={title()}>Get in&nbsp;</h1>
         <h1 className={title({ color: "violet" })}>Touch</h1>
         <h1 className={title()}>.</h1>
-        <h1 className={clsx(subtitle(), "text-md lg:text-lg text-slate-400")}>Fill out the from below and we'll get back to you as soon as.</h1>
+        <h1 className={clsx(subtitle(), "text-md lg:text-lg text-slate-400")}>Fill out the from below and we&apos;ll get back to you as soon as.</h1>
         <form
           className="grid gap-y-5 mt-5 w-full"
         >

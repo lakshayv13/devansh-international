@@ -1,9 +1,9 @@
 import clsx from "clsx";
-import { title } from "../primitives";
+import { title } from "../../components/primitives";
 import Image from 'next/image';
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider"
-import { InfiniteMovingCards } from "./infinite-moving-cards-2";
+import { InfiniteMovingCards } from "../../components/ui/infinite-moving-cards-2";
 import { siteConfig } from "@/config/site";
 
 interface Benefit {
@@ -31,9 +31,9 @@ export default function ServiceInfo(props: Props) {
                 <div className="flex flex-col gap-y-5">
                     <h1 className={clsx(title(), "text-[2rem] lg:text-3xl text-center")}>Benefits of {props.name}</h1>
                     <div className="flex flex-wrap justify-center gap-y-5 lg:flex-nowrap gap-x-5 mt-5">
-                        {props.benefits.map((benefit) => {
+                        {props.benefits.map((benefit, idx) => {
                             return (
-                                <Card className="max-w-[400px]">
+                                <Card key={idx} className="max-w-[400px]">
                                     <CardHeader className="flex gap-3">
                                         <div className="flex flex-col">
                                         <p className="text-md font-semibold">{benefit.title}</p>

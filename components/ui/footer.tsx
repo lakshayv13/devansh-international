@@ -7,15 +7,15 @@ export default function Footer() {
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 dark:text-gray-300 tez md:px-8">
                 <div className="justify-between sm:flex">
                     <div className="space-y-6">
-                        <img src="logo.svg" className="w-52" />
+                        <img src="logo.svg" alt="logo" className="w-52" />
                         <p className="max-w-md">
                         We specialize in providing efficient and reliable document attestation services, ensuring your credentials are globally recognized. Experience seamless solutions with us..
                         </p>
                         <ul className="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-sm sm:text-base">
                             {
                                 siteConfig.footer.main.map((item, idx) => (
-                                    <li className="text-gray-800 dark:text-gray-100 hover:text-gray-500 dark:hover:text-gray-400 duration-150">
-                                        <a key={idx} href={item.href}>
+                                    <li key={idx} className="text-gray-800 dark:text-gray-100 hover:text-gray-500 dark:hover:text-gray-400 duration-150">
+                                        <a href={item.href}>
                                             {item.name}
                                         </a>
                                     </li>

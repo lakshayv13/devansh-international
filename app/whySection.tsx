@@ -53,6 +53,12 @@ export default function WhySection() {
         return () => clearTimeout(timer);
     }, [currentSelection]);
 
+    const handleKeyDown = (event: React.KeyboardEvent, index: number) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            setCurrentSelection(index);
+        }
+    };
+
     return (
         <section className="lg:flex justify-between items-center gap-x-10 mt-10 lg:mt-0 w-full">
             <div className="lg:w-[35%]">
@@ -62,7 +68,10 @@ export default function WhySection() {
                             key={item.index}
                             className="hidden lg:flex items-center justify-start h-[110px] gap-3 hover:gap-6 transition-all duration-200 border-slate-600 border-b-1 cursor-pointer"
                             style={{fontWeight: item.index === currentSelection ? "bolder" : "normal"}} 
-                            onClick={() => {setCurrentSelection(item.index)}}
+                            onClick={() => setCurrentSelection(item.index)}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(event) => handleKeyDown(event, item.index)}
                         >
                             <Kaaran name={item.name} index={item.index} />
                             <RightArrow strokeWidth={"48"}/>

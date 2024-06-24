@@ -1,21 +1,11 @@
 'use client';
-import ServiceInfo from "@/components/ui/serviceInfo";
-import { serviceConfig } from "@/config/service";
-import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
+import ServicePage from './servicePage';
 
-type ServiceKey = keyof typeof serviceConfig;
-
-
-export default function PricingPage() {
-
-  const searchParams = useSearchParams()
-  const search = (searchParams.get('service') || "mea") as ServiceKey;
-
+export default function ServicesWrapper() {
   return (
-    <div>
-      {serviceConfig[search].map(service => (
-        <ServiceInfo name={service.name} description={service.description} benefits={service.benefits} />
-      ))}
-    </div>
+    <Suspense fallback={<div>Loading services...</div>}>
+      <ServicePage />
+    </Suspense>
   );
 }
