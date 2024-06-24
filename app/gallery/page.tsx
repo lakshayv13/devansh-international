@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Modal, ModalContent, ModalBody, useDisclosure } from "@nextui-org/modal";
 import { useState } from "react";
 import { title } from "@/components/primitives";
+import clsx from "clsx";
 
 interface GalleryItem {
   image: string;
@@ -22,7 +23,7 @@ export default function BlogPage() {
   return (
     <>
     <h1 className={title()}>Gallery</h1>
-    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {siteConfig.gallery.map((item: GalleryItem, index: number) => (
         <div key={index}>
           <Image

@@ -6,6 +6,7 @@ import { DropdownItem, DropdownTrigger, Dropdown, DropdownMenu } from "@nextui-o
 import { ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale, MEALogo, ApostilleLogo, EmbassyAttestationLogo, TranslationIcon } from "./Icons.jsx";
 import { AcmeLogo } from "./AcmeLogo.jsx";
 import { ThemeSwitch } from "@/components/theme-switch";
+import Image from "next/image.js";
 
 export default function Navbar() {
 
@@ -28,8 +29,7 @@ export default function Navbar() {
   return (
     <UINavbar className="w-full z-50" maxWidth="full" onMenuOpenChange={setIsMenuOpen}>
       <NavbarBrand>
-        <AcmeLogo />
-        <p className="font-bold text-inherit">Devansh International</p>
+        <Image src="logo.svg" alt="logo" width={200} height={50} />
       </NavbarBrand>
       <NavbarContent className="hidden md:flex gap-6">
         <NavbarItem>
@@ -62,6 +62,7 @@ export default function Navbar() {
               key="autoscaling"
               description="MEA Attestation involves the verification and endorsement of documents."
               startContent={icons.scale}
+              href="/services?service=mea"
             >
               MEA Attestation
             </DropdownItem>
@@ -69,6 +70,7 @@ export default function Navbar() {
               key="usage_metrics"
               description="Apostille Attestation is the simple and effective process of legalizing a document."
               startContent={icons.lock}
+              href="/services?service=apostille"
             >
               Apostille
             </DropdownItem>
@@ -155,6 +157,7 @@ export default function Navbar() {
               key="autoscaling"
               description="MEA Attestation involves the verification and endorsement of documents."
               startContent={icons.scale}
+              href="/services?service=mea"
             >
               MEA Attestation
             </DropdownItem>
@@ -162,6 +165,7 @@ export default function Navbar() {
               key="usage_metrics"
               description="Apostille Attestation is the simple and effective process of legalizing a document."
               startContent={icons.lock}
+              href="/services?service=apostille"
             >
               Apostille
             </DropdownItem>

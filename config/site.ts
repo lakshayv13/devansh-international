@@ -5,6 +5,38 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "Devansh International",
   description: "Make beautiful websites regardless of your design experience.",
+  serviceDocument: [
+    {
+      name: "Birth Certificates",
+      description: "A birth certificate is an essential legal document that officially records the birth of a child. It serves as proof of identity and nationality, and is required for accessing various services such as education, healthcare, and obtaining a passport.",
+      link: "https://en.wikipedia.org/wiki/Birth_certificate"
+    },
+    {
+      name: "Marriage Certificates",
+      description: "A marriage certificate is a legal document that officially records the union of two individuals in marriage. It serves as proof of marital status and is often required for legal, financial, and social purposes.",
+      link: "https://en.wikipedia.org/wiki/Marriage_certificate"
+    },
+    {
+      name: "Death Certificates",
+      description: "A death certificate is an official document issued by the government that records the details of a person's death. It is essential for legal processes such as estate settlement, claiming insurance, and other posthumous matters.",
+      link: "https://en.wikipedia.org/wiki/Death_certificate"
+    },
+    {
+      name: "Educational Documents",
+      description: "Educational documents include diplomas, degrees, transcripts, and certificates that verify an individual's academic achievements and qualifications. They are crucial for pursuing higher education, employment, and professional licensing.",
+      link: "https://juraliatraducciones.com/en/producto/educational-documents-and-academic-background/"
+    },
+    {
+      name: "Commercial Documents",
+      description: "Commercial documents include invoices, bills of lading, purchase orders, and contracts used in business transactions. They are essential for facilitating trade, ensuring compliance, and maintaining records of commercial activities.",
+      link: "https://juraliatraducciones.com/en/producto/commercial-documents/"
+    },
+    {
+      name: "Legal Documents",
+      description: "Commercial documents include invoices, bills of lading, purchase orders, and contracts used in business transactions. They are essential for facilitating trade, ensuring compliance, and maintaining records of commercial activities.",
+      link: "https://juraliatraducciones.com/en/producto/court-documents/"
+    },
+  ],
   navItems: [
     {
       label: "Home",
@@ -192,19 +224,19 @@ export const siteConfig = {
   footer: {
     main: [
       {
-        href: 'javascript:void()',
+        href: '/',
         name: 'Home'
       },
       {
-          href: 'javascript:void()',
+          href: '/gallery',
           name: 'Gallery'
       },
       {
-          href: 'javascript:void()',
+          href: '/faqs',
           name: 'FAQs'
       },
       {
-          href: 'javascript:void()',
+          href: '/contact',
           name: 'Contact Us'
       }
     ],
@@ -213,19 +245,19 @@ export const siteConfig = {
         label: "Services",
         items: [
             {
-                href: 'javascript:void()',
+                href: '/services?service=mea',
                 name: 'MEA Attestation'
             },
             {
-                href: 'javascript:void()',
+                href: '/services?service=apostille',
                 name: 'Apostille'
             },
             {
-                href: 'javascript:void()',
+                href: '/services?service=embassy',
                 name: 'Embassy Attestation'
             },
             {
-                href: 'javascript:void()',
+                href: '/services?service=translation',
                 name: 'Translation'
             },
         ]
